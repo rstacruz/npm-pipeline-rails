@@ -14,6 +14,11 @@ If you don't want to use the generator, here's what it does.
 
 > Set it up with `brunch` and some basic plugins.
 
+```sh
+npm init --yes
+npm install --save-dev brunch javascript-brunch css-brunch auto-reload-brunch
+```
+
 _See:_ [sample package.json](../lib/generators/npm_pipeline/brunch/package.json)
 
 #### brunch-config.js

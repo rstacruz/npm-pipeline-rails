@@ -14,6 +14,11 @@ If you don't want to use the generator, here's what it does.
 
 > Set up `gulp`, `gulp-cli`, and some basic Gulp plugins.
 
+```sh
+npm init --yes
+npm install --save-dev gulp gulp-cli gulp-concat
+```
+
 _See:_ [sample package.json](../lib/generators/npm_pipeline/gulp/package.json)
 
 #### gulpfile.js
