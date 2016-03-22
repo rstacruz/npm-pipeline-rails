@@ -1,0 +1,17 @@
+{
+  "name": "brunch-app",
+  "description": "Description",
+  "author": "Your Name",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "brunch watch",
+    "build": "brunch build --production"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "brunch": "^2.5.1",
+    "javascript-brunch": "^2.0.0",
+    "css-brunch": "^2.0.0",
+    "auto-reload-brunch": "^2.0.0"
+  }
+}

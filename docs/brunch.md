@@ -1,6 +1,12 @@
 # Brunch example
 
-## `brunch-config.js`
+Run `rails generate npm_pipeline:brunch`.
+
+## Manual setup
+
+If you don't want to use the generator, here's what it does.
+
+### `brunch-config.js`
 
 Set it up to watch source files in `app/brunch`, then put built files into `vendor/assets`.
 
@@ -13,13 +19,13 @@ module.exports = {
   },
 
   files: {
-    javascripts: {joinTo: 'javascripts/app.js'},
-    stylesheets: {joinTo: 'stylesheets/app.css'}
+    javascripts: {joinTo: 'javascripts/brunch/app.js'},
+    stylesheets: {joinTo: 'stylesheets/brunch/app.css'}
   }
 }
 ```
 
-## `package.json`
+### `package.json`
 
 ```js
 {
@@ -33,56 +39,52 @@ module.exports = {
   },
   "dependencies": {},
   "devDependencies": {
-    "brunch": "*",
+    "brunch": "^2.5.1",
     "javascript-brunch": "^2.0.0",
     "css-brunch": "^2.0.0",
-    "uglify-js-brunch": "^2.0.0",
-    "clean-css-brunch": "^2.0.0",
     "auto-reload-brunch": "^2.0.0"
   }
 }
 ```
 
-## `.gitignore`
+### `.gitignore`
 
 Set it up to ignore Brunch's built files.
 
 ```
-/vendor/assets/stylesheets/app.css
-/vendor/assets/stylesheets/app.css.map
-/vendor/assets/javascripts/app.js
-/vendor/assets/javascripts/app.js.map
+/vendor/assets/stylesheets/brunch/
+/vendor/assets/javascripts/brunch/
 ```
 
-## `app/assets/stylesheets/application.css`
+### `app/assets/stylesheets/application.css`
 
-Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets`.
+Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets`, as built by Brunch.
 
 ```css
 /*
- *= require app
+ *= require brunch/app
  */
 ```
 
-## `app/assets/javascripts/application.js`
+### `app/assets/javascripts/application.js`
 
-Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts`.
+Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts`, as built by Brunch.
 
 ```css
-//= require app
+//= require brunch/app
 ```
 
-## `app/brunch`
+### `app/brunch`
 
 Put your source files into `app/brunch`. For instance:
 
-* `app/brunch/hello.css`
+* `app/brunch/example.css`
 
   ```css
   * { color: blue }
   ```
 
-* `app/brunch/hello.js`
+* `app/brunch/example.js`
 
   ```js
   alert('it works!')

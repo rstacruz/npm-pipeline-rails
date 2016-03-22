@@ -17,8 +17,6 @@
 /tmp
 
 /node_modules
-/vendor/assets/stylesheets/app.css
-/vendor/assets/stylesheets/app.css.map
-/vendor/assets/javascripts/app.js
-/vendor/assets/javascripts/app.js.map
+/vendor/assets/stylesheets/brunch/
+/vendor/assets/javascripts/brunch/
 /public/assets
