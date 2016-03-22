@@ -1,3 +1,6 @@
+require 'rails'
+require 'rails/railtie'
+
 module NpmPipelineRails
   class Railtie < ::Rails::Railtie
     config.npm = ActiveSupport::OrderedOptions.new
@@ -16,7 +19,7 @@ module NpmPipelineRails
       task(:precompile).enhance ['npm_build']
     end
 
-    after_initialize do |app|
+    initializer 'npm_pipeline.watch' do |app|
       puts '[npr] railtie initialized'
       if ::Rails.env.development? && ::Rails.const_defined?(:Server)
         system app.config.npm.install
