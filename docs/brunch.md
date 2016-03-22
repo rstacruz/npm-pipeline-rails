@@ -1,6 +1,6 @@
 # Brunch example
 
-### brunch-config.js
+## `brunch-config.js`
 
 Set it up to watch source files in `app/brunch`, then put built files into `vendor/assets`.
 
@@ -19,7 +19,7 @@ module.exports = {
 }
 ```
 
-### package.json
+## `package.json`
 
 ```js
 {
@@ -43,7 +43,7 @@ module.exports = {
 }
 ```
 
-### .gitignore
+## `.gitignore`
 
 Set it up to ignore Brunch's built files.
 
@@ -54,7 +54,7 @@ Set it up to ignore Brunch's built files.
 /vendor/assets/javascripts/app.js.map
 ```
 
-### app/assets/stylesheets/application.css
+## `app/assets/stylesheets/application.css`
 
 Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets`.
 
@@ -64,7 +64,7 @@ Set it up to include Brunch's built files. This will load from `vendor/assets/st
  */
 ```
 
-### `app/assets/javascripts/application.js`
+## `app/assets/javascripts/application.js`
 
 Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts`.
 
@@ -72,7 +72,7 @@ Set it up to include Brunch's built files. This will load from `vendor/assets/ja
 //= require app
 ```
 
-### app/brunch
+## `app/brunch`
 
 Put your source files into `app/brunch`. For instance:
 
