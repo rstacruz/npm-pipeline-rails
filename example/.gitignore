@@ -17,8 +17,8 @@
 /tmp
 
 /node_modules
-/app/assets/stylesheets/app.css
-/app/assets/stylesheets/app.css.map
-/app/assets/javascripts/app.js
-/app/assets/javascripts/app.js.map
+/vendor/assets/stylesheets/app.css
+/vendor/assets/stylesheets/app.css.map
+/vendor/assets/javascripts/app.js
+/vendor/assets/javascripts/app.js.map
 /public/assets
