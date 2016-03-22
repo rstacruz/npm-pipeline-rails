@@ -1,23 +1,30 @@
 # Gulp integration
 
-Run `./bin/rails generate npm_pipeline:gulp`.
+Run this command to run the automated setup.
+
+```sh
+./bin/rails generate npm_pipeline:gulp
+```
 
 ## Manual setup
 
 If you don't want to use the generator, here's what it does.
 
-### package.json
+#### package.json
 
-Set up `gulp`, `gulp-cli`, and some basic Gulp plugins.
-[See example.](../lib/generators/npm_pipeline/gulp/package.json)
+> Set up `gulp`, `gulp-cli`, and some basic Gulp plugins.
 
-### gulpfile.js
+_See:_ [sample package.json](../lib/generators/npm_pipeline/gulp/package.json)
 
-Set it up to watch source files in `app/gulp`, then put built files into `vendor/assets`. [See example.](../lib/generators/npm_pipeline/gulp/gulpfile.js)
+#### gulpfile.js
 
-### .gitignore
+> Set it up to watch source files in `app/gulp`, then put built files into `vendor/assets`.
 
-Set it up to ignore Gulp's built files.
+_See:_ [sample gulpfile.js](../lib/generators/npm_pipeline/gulp/gulpfile.js)
+
+#### .gitignore
+
+> Set it up to ignore Gulp's built files.
 
 ```
 /node_modules
@@ -25,9 +32,9 @@ Set it up to ignore Gulp's built files.
 /vendor/assets/javascripts/gulp
 ```
 
-### app/assets/stylesheets/application.css
+#### app/assets/stylesheets/application.css
 
-Set it up to include Gulp's built files. This will load from `vendor/assets/stylesheets/gulp/app.css`, as built by Gulp.
+> Set it up to include Gulp's built files. This will load from `vendor/assets/stylesheets/gulp/app.css`, as built by Gulp.
 
 ```css
 /*
@@ -35,17 +42,17 @@ Set it up to include Gulp's built files. This will load from `vendor/assets/styl
  */
 ```
 
-### app/assets/javascripts/application.js
+#### app/assets/javascripts/application.js
 
-Set it up to include Gulp's built files. This will load from `vendor/assets/javascripts/gulp/app.js`, as built by Gulp.
+> Set it up to include Gulp's built files. This will load from `vendor/assets/javascripts/gulp/app.js`, as built by Gulp.
 
 ```css
 //= require gulp/app
 ```
 
-### app/gulp/
+#### app/gulp/
 
-Put your source files into `app/gulp`. For instance:
+> Put your source files into `app/gulp`. For instance:
 
 * `app/gulp/example.css`
 
