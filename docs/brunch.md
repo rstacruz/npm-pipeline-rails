@@ -34,7 +34,7 @@ _See:_ [sample brunch-config.js](../lib/generators/npm_pipeline/brunch/brunch-co
 
 #### app/assets/stylesheets/application.css
 
-> Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets`, as built by Brunch.
+> Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets/brunch/app.css`, as built by Brunch.
 
 ```css
 /*
@@ -44,7 +44,7 @@ _See:_ [sample brunch-config.js](../lib/generators/npm_pipeline/brunch/brunch-co
 
 #### app/assets/javascripts/application.js
 
-> Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts`, as built by Brunch.
+> Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts/brunch/app.js`, as built by Brunch.
 
 ```css
 //= require brunch/app
