@@ -14,14 +14,14 @@ Add compiled assets to `.gitignore`.
 
 ### brunch-config.js
 
-Set it up to watch `app/brunch`.
+Set it up to watch source files in `app/brunch`, then put built files into `vendor/assets`.
 
 ```js
 // See http://brunch.io for documentation.
 module.exports = {
   paths: {
     watched: ['app/brunch'],
-    public: 'app/assets'
+    public: 'vendor/assets'
   },
 
   files: {
@@ -60,16 +60,15 @@ module.exports = {
 Set it up to ignore Brunch's built files.
 
 ```
-/app/assets/stylesheets/app.css
-/app/assets/stylesheets/app.css.map
-/app/assets/javascripts/app.js
-/app/assets/javascripts/app.js.map
-/public/assets
+/vendor/assets/stylesheets/app.css
+/vendor/assets/stylesheets/app.css.map
+/vendor/assets/javascripts/app.js
+/vendor/assets/javascripts/app.js.map
 ```
 
 ### app/assets/stylesheets/application.css
 
-Set it up to include Brunch's built files.
+Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets`.
 
 ```css
 /*
@@ -79,8 +78,12 @@ Set it up to include Brunch's built files.
 
 ### app/assets/javascripts/application.js
 
-Set it up to include Brunch's built files.
+Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts`.
 
 ```css
 //= require app
 ```
+
+### app/brunch
+
+Put your source files into `app/brunch`.

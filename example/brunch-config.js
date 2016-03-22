@@ -2,7 +2,7 @@
 module.exports = {
   paths: {
     watched: ['app/brunch'],
-    public: 'app/assets'
+    public: 'vendor/assets'
   },
 
   files: {
