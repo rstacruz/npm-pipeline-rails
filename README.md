@@ -5,7 +5,7 @@
 npm-pipeline-rails allows you to use any toolchain to bulid your asset files in [Rails] 4.2+. This allows you to:
 
 - Use [Brunch][] with Rails ([instructions](docs/brunch.md))
-- Use [Gulp][] with Rails
+- Use [Gulp][] with Rails ([instructions](docs/gulp.md))
 - Use [Grunt][] with Rails
 - Use [Webpack][] with Rails
 - Use [Browserify][] with Rails
