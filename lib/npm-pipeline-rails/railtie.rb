@@ -34,7 +34,6 @@ module NpmPipelineRails
     initializer 'npm_pipeline.watch' do |app|
       if ::Rails.env.development? && ::Rails.const_defined?(:Server)
         do_system app.config.npm.install
-        exit $? unless $? == 0
         [*app.config.npm.watch].each do |cmd|
           fork { do_system [cmd] }
         end
