@@ -7,7 +7,6 @@ module NpmPipelineRails
       [*commands].each do |cmd|
         system cmd
         exit $? unless $? == 0
-
       end
     end
   end
@@ -16,7 +15,6 @@ module NpmPipelineRails
     include ::NpmPipelineRails::Utils
 
     config.npm = ActiveSupport::OrderedOptions.new
-
     config.npm.build = ['npm run build']
     config.npm.watch = ['npm run start']
     config.npm.install = ['npm install']
