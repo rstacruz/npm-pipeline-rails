@@ -1,18 +1,19 @@
 {
-  "name": "example",
-  "version": "1.0.0",
-  "description": "== README",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "name": "brunch-app",
+  "description": "Description",
+  "author": "Your Name",
+  "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "brunch watch",
+    "build": "brunch build --production"
   },
-  "author": "",
-  "license": "ISC",
-  "scripts": {
-    "build": "echo building...",
-    "start": "echo starting"
+  "dependencies": {},
+  "devDependencies": {
+    "brunch": "*",
+    "javascript-brunch": "^2.0.0",
+    "css-brunch": "^2.0.0",
+    "uglify-js-brunch": "^2.0.0",
+    "clean-css-brunch": "^2.0.0",
+    "auto-reload-brunch": "^2.0.0"
   }
 }

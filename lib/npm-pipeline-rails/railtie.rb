@@ -10,23 +10,25 @@ module NpmPipelineRails
     config.npm.install = 'npm install'
 
     rake_tasks do |app|
-      describe 'Build assets prerequisites using npm'
-      task :npm_build do
-        system app.config.npm.install
-        fork app.config.npm.build
-      end
+      namespace :assets do
+        desc 'Build assets prerequisites using npm'
+        task :npm_build do
+          system app.config.npm.install
+          exit $? unless $? == 0
+          system app.config.npm.build
+          exit $? unless $? == 0
+        end
 
-      task(:precompile).enhance ['npm_build']
+        task(:precompile).enhance ['npm_build']
+      end
     end
 
     initializer 'npm_pipeline.watch' do |app|
-      puts '[npr] railtie initialized'
       if ::Rails.env.development? && ::Rails.const_defined?(:Server)
         system app.config.npm.install
+        exit $? unless $? == 0
         fork { system app.config.npm.watch }
       end
     end
   end
 end
-
-puts '[npr] railtie loaded'
