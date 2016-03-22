@@ -92,12 +92,6 @@ Consult [railtie.rb](https://github.com/rstacruz/npm-pipeline-rails/blob/master/
 
 <br>
 
-## Integration examples
-
-* [Brunch](docs/brunch.md)
-
-<br>
-
 ## Motivation
 
 Rails's asset pipeline was a great step forward for Rails 3. For today's requirements however, it doesn't always come with all the tools you need. npm-pipeline-rails lets you outsource asset building complexities to Node.js-based tools.
