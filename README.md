@@ -46,6 +46,12 @@ Use the generators for your preferred build tool:
 * Create a `package.json` with `start` and `build` scripts. ([See example](lib/generators/npm_pipeline/brunch/package.json))
 * Add your expected compiled assets to `.gitignore`.
 
+#### Set up support for tests
+
+If you're using continuous integration for your tests, configure it to run `bundle exec rake assets:npm_build` before your tests.
+
+For tests running in your development machine, ensure that asset files are available when running your tests. This means starting your dev server at least once before running tests, or invoking `rake assets:npm_build` manually.
+
 <br>
 
 ## Configuration
