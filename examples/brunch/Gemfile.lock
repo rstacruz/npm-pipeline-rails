@@ -1,7 +1,7 @@
 PATH
-  remote: ..
+  remote: ../..
   specs:
-    npm-pipeline-rails (0.1.0)
+    npm-pipeline-rails (1.1.0)
       railties (~> 4.0)
       sprockets (~> 3.5)
 
