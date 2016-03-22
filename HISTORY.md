@@ -1,3 +1,10 @@
+## [v1.1.1]
+> Mar 22, 2016
+
+- Update documentation and gem description; no functional changes.
+
+[v1.1.1]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.1.0...v1.1.1
+
 ## [v1.1.0]
 > Mar 22, 2016
 
