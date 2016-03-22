@@ -4,8 +4,8 @@
 
 npm-pipeline-rails allows you to use any toolchain to bulid your asset files. This allows you to:
 
-- Use [webpack][] with Rails
 - Use [brunch][] with Rails ([instructions](docs/brunch.md))
+- Use [webpack][] with Rails
 - Use [browserify][] with Rails
 - Use any other asset tool with Rails
 
@@ -13,24 +13,30 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files. Th
 [brunch]: http://brunch.io/
 [browserify]: http://browserify.org/
 
-> ![](docs/screenshots/full.png)
+<br>
+
+![](docs/screenshots/full.png)
+
+> _See [§ How it Works](#how-it-works) for an explanation of the diagram above._
 
 ## Usage
 
-Add to your `Gemfile`.
+Add this line below to your `Gemfile`. After that, proceed with an automated or manual setup.
 
-  ```rb
-  gem 'npm-pipeline-rails'
-  ```
+```rb
+gem 'npm-pipeline-rails'
+```
 
-You may do a manual setup:
-
-* Create a `package.json` with `start` and `build` commands.
-* Add compiled assets to `.gitignore`.
-
-Or an automated setup:
+#### Automated setup
 
 * Run `./bin/rails generate npm_pipeline:brunch` to add a sample integration with [Brunch]. ([info](docs/brunch.md))
+
+#### Manual setup
+
+* Create a `package.json` with `start` and `build` scripts. ([See example](lib/generators/npm_pipeline/brunch/package.json))
+* Add your expected compiled assets to `.gitignore`.
+
+<br>
 
 ## Configuration
 
@@ -43,7 +49,7 @@ Rails.application.configure do
   # Command to install dependencies
   config.npm.install = ['npm install']
 
-  # Command to build production
+  # Command to build production assets
   config.npm.build = ['npm run build']
 
   # Command to start a file watcher
@@ -57,9 +63,13 @@ Rails.application.configure do
 end
 ```
 
+<br>
+
 ## How it works
 
 npm-pipeline-rails allows you to hook certain commands, usually npm scripts, during the Rails app lifecycle. It assumes that your tool will build plain JS and CSS files into `vendor/assets`, allowing it to be picked up by Rails's asset pipeline.
+
+It does __not__ replace the Rails asset pipeline, but rather it works with it. The files you build with your npm pipeline will be available as regular files in the Rails asset pipeline.
 
 #### In development
 
@@ -69,10 +79,13 @@ When starting a Rails development server (`bundle exec rails s`), it runs the `i
 
 When running `rake assets:precompile`, it will first run the `install` command then the `build` command.
 
+<br>
+
 ## Integration examples
 
 * [Brunch](docs/brunch.md)
-* more to come soon
+
+<br>
 
 ## Thanks
 
