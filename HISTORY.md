@@ -1,3 +1,10 @@
+## [v1.1.3]
+> Mar 22, 2016
+
+- Fix "TypeError: no implicit conversion of Process::Status into Integer" error.
+
+[v1.1.3]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.1.2...v1.1.3
+
 ## [v1.1.2]
 > Mar 22, 2016
 
