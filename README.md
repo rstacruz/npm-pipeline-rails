@@ -7,7 +7,6 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 - Use [Brunch][] with Rails ([instructions](docs/brunch.md))
 - Use [Gulp][] with Rails ([instructions](docs/gulp.md))
 - Use [Grunt][] with Rails
-- Use [Webpack][] with Rails
 - Use [Browserify][] with Rails
 - Use any other asset tool with Rails
 
@@ -108,6 +107,11 @@ Rails's asset pipeline was a great step forward for Rails 3. For today's require
 > __[Read more →](docs/motivation.md)__
 
 <br>
+
+## Also see
+
+- [webpack-assets](https://github.com/toptal/webpack-assets) - integration for webpack-dev-server
+- [browserify-rails](https://rubygems.org/gems/browserify-rails) - browserify for the asset pipeline
 
 ## Thanks
 
