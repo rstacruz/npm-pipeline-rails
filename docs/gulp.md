@@ -47,13 +47,13 @@ Set it up to include Gulp's built files. This will load from `vendor/assets/java
 
 Put your source files into `app/gulp`. For instance:
 
-* `app/brunch/example.css`
+* `app/gulp/example.css`
 
  ```css
   * { color: blue }
   ```
 
-* `app/brunch/example.js`
+* `app/gulp/example.js`
 
   ```js
   alert('it works!')
