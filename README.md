@@ -13,6 +13,8 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files. Th
 [brunch]: http://brunch.io/
 [browserify]: http://browserify.org/
 
+> ![](docs/screenshots/full.png)
+
 ## Usage
 
 * Add to your `Gemfile`.
@@ -52,13 +54,9 @@ npm-pipeline-rails allows you to hook certain commands, usually npm scripts, dur
 
 When starting a Rails development server (`bundle exec rails s`), it runs the `install` command. After that, it starts a background process that runs your `watch` command.
 
-![](docs/screenshots/server.png)
-
 #### In production
 
 When running `rake assets:precompile`, it will first run the `install` command then the `build` command.
-
-![](docs/screenshots/build.png)
 
 ## Integration examples
 
