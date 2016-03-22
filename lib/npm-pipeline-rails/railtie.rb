@@ -6,7 +6,7 @@ module NpmPipelineRails
     def do_system(commands)
       [*commands].each do |cmd|
         system cmd
-        exit $? unless $? == 0
+        exit $?.exitstatus unless $?.exitstatus == 0
       end
     end
   end
