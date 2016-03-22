@@ -39,7 +39,7 @@ gem 'npm-pipeline-rails'
 Use the generators for your preferred build tool:
 
 - __[Brunch](docs/brunch.md)__ - `./bin/rails generate npm_pipeline:brunch`
-- __[Grunt](docs/grunt.md)__ - `./bin/rails generate npm_pipeline:grunt`
+- __[Gulp](docs/gulp.md)__ - `./bin/rails generate npm_pipeline:gulp`
 
 #### Manual setup
 
