@@ -21,7 +21,7 @@ module NpmPipelineRails
 
     rake_tasks do |app|
       namespace :assets do
-        desc 'Build assets prerequisites using npm'
+        desc 'Build asset prerequisites using npm'
         task :npm_build do
           do_system app.config.npm.install
           do_system app.config.npm.build
