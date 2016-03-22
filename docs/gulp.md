@@ -1,6 +1,6 @@
 # Gulp integration
 
-Run this command to run the automated setup.
+Run this to set your project up with a simple Gulp config.
 
 ```sh
 ./bin/rails generate npm_pipeline:gulp

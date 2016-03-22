@@ -1,6 +1,6 @@
 # Brunch integration
 
-Run this to run the automated setup.
+Run this to set your project up with a simple Brunch config.
 
 ```sh
 ./bin/rails generate npm_pipeline:brunch
