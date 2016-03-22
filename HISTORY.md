@@ -1,3 +1,10 @@
+## [v1.1.2]
+> Mar 22, 2016
+
+- Make the gem package smaller; no functional changes.
+
+[v1.1.2]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.1.1...v1.1.2
+
 ## [v1.1.1]
 > Mar 22, 2016
 
