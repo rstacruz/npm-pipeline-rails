@@ -17,15 +17,20 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files. Th
 
 ## Usage
 
-* Add to your `Gemfile`.
+Add to your `Gemfile`.
 
   ```rb
   gem 'npm-pipeline-rails'
   ```
 
-* Create a `package.json` with `start` and `build` commands.
+You may do a manual setup:
 
+* Create a `package.json` with `start` and `build` commands.
 * Add compiled assets to `.gitignore`.
+
+Or an automated setup:
+
+* Run `./bin/rails generate npm_pipeline:brunch` to add a sample integration with [Brunch]. ([info](docs/brunch.md))
 
 ## Configuration
 

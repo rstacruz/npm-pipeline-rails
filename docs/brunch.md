@@ -1,6 +1,6 @@
 # Brunch example
 
-Run `rails generate npm_pipeline:brunch`.
+Run `./bin/rails generate npm_pipeline:brunch`.
 
 ## Manual setup
 
