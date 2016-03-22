@@ -41,13 +41,19 @@ npm-pipeline-rails provides these configuration options:
 
 Rails.application.configure do
   # Command to install dependencies
-  config.npm.install = 'npm install'
+  config.npm.install = ['npm install']
 
   # Command to build production
-  config.npm.build = 'npm run build'
+  config.npm.build = ['npm run build']
 
   # Command to start a file watcher
-  config.npm.watch = 'npm run start'
+  config.npm.watch = ['npm run start']
+
+  # The commands are arrays; you may add more commands as needed:
+  config.npm.watch = [
+    'npm run webpack:start',
+    'npm run brunch:start'
+  ]
 end
 ```
 
