@@ -36,7 +36,10 @@ gem 'npm-pipeline-rails'
 
 #### Automated setup
 
-* Run `./bin/rails generate npm_pipeline:brunch` to add a sample integration with [Brunch]. ([info](docs/brunch.md))
+Use the generators for your preferred build tool:
+
+- __[Brunch](docs/brunch.md)__ - `./bin/rails generate npm_pipeline:brunch`
+- __[Grunt](docs/grunt.md)__ - `./bin/rails generate npm_pipeline:grunt`
 
 #### Manual setup
 
