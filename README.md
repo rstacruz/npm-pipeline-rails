@@ -1,89 +1,74 @@
+# npm-pipeline-rails
+
+> Use npm as part of your Rails asset pipeline
+
+npm-pipeline-rails allows you to use any toolchain to bulid your asset files. This allows you to:
+
+- Use [webpack][] with Rails
+- Use [brunch][] with Rails ([instructions](docs/brunch.md))
+- Use [browserify][] with Rails
+- Use any other asset tool with Rails
+
+[webpack]: https://webpack.github.io/
+[brunch]: http://brunch.io/
+[browserify]: http://browserify.org/
+
 ## Usage
 
-Add to your `Gemfile`.
+* Add to your `Gemfile`.
+
+  ```rb
+  gem 'npm-pipeline-rails'
+  ```
+
+* Create a `package.json` with `start` and `build` commands.
+
+* Add compiled assets to `.gitignore`.
+
+## Configuration
+
+npm-pipeline-rails provides these configuration options:
 
 ```rb
-gem 'npm-pipeline-rails'
+# These are defaults; in most cases, you don't need to configure anything.
+
+Rails.application.configure do
+  # Command to install dependencies
+  config.npm.install = 'npm install'
+
+  # Command to build production
+  config.npm.build = 'npm run build'
+
+  # Command to start a file watcher
+  config.npm.watch = 'npm run start'
+end
 ```
 
-Create a `package.json` with `start` and `build` commands.
+## How it works
 
-Add compiled assets to `.gitignore`.
+npm-pipeline-rails allows you to hook certain commands, usually npm scripts, during the Rails app lifecycle. It assumes that your tool will build plain JS and CSS files into `vendor/assets`, allowing it to be picked up by Rails's asset pipeline.
 
-## Brunch example
+#### In development
 
-### brunch-config.js
+When starting a Rails development server (`bundle exec rails s`), it runs the `install` command. After that, it starts a background process that runs your `watch` command.
 
-Set it up to watch source files in `app/brunch`, then put built files into `vendor/assets`.
+#### In production
 
-```js
-// See http://brunch.io for documentation.
-module.exports = {
-  paths: {
-    watched: ['app/brunch'],
-    public: 'vendor/assets'
-  },
+When running `rake assets:precompile`, it will first run the `install` command then the `build` command.
 
-  files: {
-    javascripts: {joinTo: 'javascripts/app.js'},
-    stylesheets: {joinTo: 'stylesheets/app.css'}
-  }
-}
-```
+## Integration examples
 
-### package.json
+* [Brunch](docs/brunch.md)
+* more to come soon
 
-```js
-{
-  "name": "brunch-app",
-  "description": "Description",
-  "author": "Your Name",
-  "version": "0.1.0",
-  "scripts": {
-    "start": "brunch watch",
-    "build": "brunch build --production"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "brunch": "*",
-    "javascript-brunch": "^2.0.0",
-    "css-brunch": "^2.0.0",
-    "uglify-js-brunch": "^2.0.0",
-    "clean-css-brunch": "^2.0.0",
-    "auto-reload-brunch": "^2.0.0"
-  }
-}
-```
+## Thanks
 
-### .gitignore
+**npm-pipeline-rails** © 2016+, Rico Sta. Cruz. Released under the [MIT] License.<br>
+Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
 
-Set it up to ignore Brunch's built files.
+> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
+> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
+> Twitter [@rstacruz](https://twitter.com/rstacruz)
 
-```
-/vendor/assets/stylesheets/app.css
-/vendor/assets/stylesheets/app.css.map
-/vendor/assets/javascripts/app.js
-/vendor/assets/javascripts/app.js.map
-```
-
-### app/assets/stylesheets/application.css
-
-Set it up to include Brunch's built files. This will load from `vendor/assets/stylesheets`.
-
-```css
-/*
- *= require app
- */
-```
-
-### app/assets/javascripts/application.js
-
-Set it up to include Brunch's built files. This will load from `vendor/assets/javascripts`.
-
-```css
-//= require app
-```
-
-### app/brunch
-
-Put your source files into `app/brunch`.
+[MIT]: http://mit-license.org/
+[contributors]: http://github.com/rstacruz/npm-pipeline-rails/contributors
