@@ -2,22 +2,29 @@
 
 > Use npm as part of your Rails asset pipeline
 
-npm-pipeline-rails allows you to use any toolchain to bulid your asset files. This allows you to:
+npm-pipeline-rails allows you to use any toolchain to bulid your asset files in [Rails] 4.2+. This allows you to:
 
-- Use [brunch][] with Rails ([instructions](docs/brunch.md))
-- Use [webpack][] with Rails
-- Use [browserify][] with Rails
+- Use [Brunch][] with Rails ([instructions](docs/brunch.md))
+- Use [Gulp][] with Rails
+- Use [Grunt][] with Rails
+- Use [Webpack][] with Rails
+- Use [Browserify][] with Rails
 - Use any other asset tool with Rails
 
-[webpack]: https://webpack.github.io/
-[brunch]: http://brunch.io/
-[browserify]: http://browserify.org/
+[Rails]: http://rubyonrails.org/
+[Webpack]: https://webpack.github.io/
+[Brunch]: http://brunch.io/
+[Browserify]: http://browserify.org/
+[Gulp]: http://gulpjs.com/
+[Grunt]: http://gruntjs.com/
 
 <br>
 
 ![](docs/screenshots/full.png)
 
 > _See [§ How it Works](#how-it-works) for an explanation of the diagram above._
+
+<br>
 
 ## Usage
 
@@ -79,11 +86,23 @@ When starting a Rails development server (`bundle exec rails s`), it runs the `i
 
 When running `rake assets:precompile`, it will first run the `install` command then the `build` command.
 
+#### More info
+
+Consult [railtie.rb](https://github.com/rstacruz/npm-pipeline-rails/blob/master/lib/npm-pipeline-rails/railtie.rb) for the actual code that makes all these happen.
+
 <br>
 
 ## Integration examples
 
 * [Brunch](docs/brunch.md)
+
+<br>
+
+## Motivation
+
+Rails's asset pipeline was a great step forward for Rails 3. For today's requirements however, it doesn't always come with all the tools you need. npm-pipeline-rails lets you outsource asset building complexities to Node.js-based tools.
+
+> __[Read more →](docs/motivation.md)__
 
 <br>
 
