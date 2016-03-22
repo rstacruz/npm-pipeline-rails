@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Rico Sta. Cruz']
   spec.email         = ['rstacruz@users.noreply.github.com']
 
-  spec.summary       = 'Build your Rails assets with npm'
-  spec.description   = '...'
+  spec.summary       = 'Use npm as part of your Rails asset pipeline'
+  spec.description   = 'Use any toolchain to bulid your asset files in Rails 4.2. Integrate Brunch, Gulp, Grunt, Webpack, Browserify and others seamlessly into Rails apps.'
   spec.homepage      = 'https://github.com/rstacruz/npm-pipeline-rails'
   spec.license       = 'MIT'
 
