@@ -28,4 +28,8 @@ You can use [Brunch] with Rails with ease using npm-pipeline-rails. With Brunch,
 [postcss-brunch]: https://www.npmjs.com/package/postcss-brunch
 [browserify-brunch]: https://www.npmjs.com/package/browserify-brunch
 [Grunt]: http://gruntjs.com/
+[Webpack]: https://webpack.github.io/
 [Brunch]: http://brunch.io/
+[Browserify]: http://browserify.org/
+[Gulp]: http://gulpjs.com/
+[Grunt]: http://gruntjs.com/
