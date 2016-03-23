@@ -1,3 +1,10 @@
+## [v1.2.0]
+> Mar 23, 2016
+
+- Add experimental support for Rails 5.
+
+[v1.2.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.1.3...v1.2.0
+
 ## [v1.1.3]
 > Mar 22, 2016
 
