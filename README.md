@@ -8,6 +8,7 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 - Use [Gulp][] with Rails ([instructions](docs/gulp.md))
 - Use [Grunt][] with Rails
 - Use [Browserify][] with Rails
+- Use [Broccoli][] with Rails
 - Use any other asset tool with Rails
 
 [Rails]: http://rubyonrails.org/
@@ -24,6 +25,8 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 > _See [§ How it Works](#how-it-works) for an explanation of the diagram above._
 
 <br>
+
+[Broccoli]: https://github.com/broccolijs/broccoli
 
 ## Usage
 
@@ -43,6 +46,9 @@ Use the generators for your preferred build tool:
 #### Manual setup
 
 * Create a `package.json` with `start` and `build` scripts. ([See example](lib/generators/npm_pipeline/brunch/package.json))
+  * `start` - Configure this script to run a development file watcher.
+  * `build` - Configure this script to run a production compiler.
+* Put together a setup with [Brunch], [Broccoli], or any other tool that will take files from `app/brunch/` and render them to `vendor/assets/stylesheets/brunch/` and `vendor/assets/javascripts/brunch/`. (Replace `brunch` with whatever build tool you use.)
 * Add your expected compiled assets to `.gitignore`.
 
 #### Set up support for tests
@@ -50,6 +56,15 @@ Use the generators for your preferred build tool:
 If you're using continuous integration for your tests, configure it to run `bundle exec rake assets:npm_build` before your tests.
 
 For tests running in your development machine, ensure that asset files are available when running your tests. This means starting your dev server at least once before running tests, or invoking `rake assets:npm_build` manually.
+
+#### Disable some gems
+
+You may also want to disable some gems, depending on your set up:
+
+- Disable `uglifyjs` if you already do minification in your npm tool.
+- Disable `autoprefixer-rails` if you already do autoprefixing in your npm tool.
+- Disable `sprockets-es6` if you already do ES6 compiling in your npm tool.
+- _and so on..._
 
 <br>
 
@@ -97,6 +112,16 @@ When running `rake assets:precompile`, it will first run the `install` command t
 #### More info
 
 Consult [railtie.rb](https://github.com/rstacruz/npm-pipeline-rails/blob/master/lib/npm-pipeline-rails/railtie.rb) for the actual code that makes all these happen.
+
+<br>
+
+## Skipping Rails asset pipeline
+
+The recommended setup renders files to to `vendor/assets/stylesheets/brunch/` and `vendor/assets/javascripts/brunch/`. (Replace `brunch` with whatever build tool you use.) You may opt to output to `public/assets/stylesheets/` and `public/assets/javascripts/` instead.
+
+This is not recommended since you will miss out on automatic asset fingerprinting, among other nice integrations.
+
+If you do this, you will need to run `npm run build` as part of your deploy script and CI test script.
 
 <br>
 
