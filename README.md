@@ -45,10 +45,14 @@ Use the generators for your preferred build tool:
 
 #### Manual setup
 
-* Create a `package.json` with `start` and `build` scripts. ([See example](lib/generators/npm_pipeline/brunch/package.json))
+* Put together a setup with [Brunch], [Broccoli], [Gulp], or any other tool. It should:
+  * Take source files from `app/brunch/`
+  * Render JS to `vendor/assets/stylesheets/brunch/`
+  * Render CSS to `vendor/assets/javascripts/brunch/`
+  * _(Replace `brunch` with whatever build tool you use.)_
+* Create a `package.json` with `start` and `build` scripts to point to this setup. ([See example](lib/generators/npm_pipeline/brunch/package.json))
   * `start` - Configure this script to run a development file watcher.
   * `build` - Configure this script to run a production compiler.
-* Put together a setup with [Brunch], [Broccoli], or any other tool that will take files from `app/brunch/` and render them to `vendor/assets/stylesheets/brunch/` and `vendor/assets/javascripts/brunch/`. (Replace `brunch` with whatever build tool you use.)
 * Add your expected compiled assets to `.gitignore`.
 
 #### Set up support for tests
@@ -117,7 +121,7 @@ Consult [railtie.rb](https://github.com/rstacruz/npm-pipeline-rails/blob/master/
 
 ## Skipping Rails asset pipeline
 
-The recommended setup renders files to to `vendor/assets/stylesheets/brunch/` and `vendor/assets/javascripts/brunch/`. (Replace `brunch` with whatever build tool you use.) You may opt to output to `public/assets/stylesheets/` and `public/assets/javascripts/` instead.
+The recommended setup renders files to `vendor/assets/stylesheets/brunch/` and `vendor/assets/javascripts/brunch/`. (Replace `brunch` with whatever build tool you use.) You may opt to output to `public/assets/stylesheets/` and `public/assets/javascripts/` instead.
 
 This is not recommended since you will miss out on automatic asset fingerprinting, among other nice integrations.
 
