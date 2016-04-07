@@ -33,9 +33,9 @@ module NpmPipeline
 
       def update_gitignore
         append_to_file '.gitignore',
-          "/node_modules\n" +
-          "/vendor/assets/stylesheets/gulp\n" +
-          "/vendor/assets/javascripts/gulp\n"
+          "\n/node_modules" +
+          "\n/vendor/assets/stylesheets/gulp" +
+          "\n/vendor/assets/javascripts/gulp"
       end
     end
   end
