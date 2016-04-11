@@ -35,7 +35,7 @@ module NpmPipeline
         append_to_file '.gitignore',
           "\n/node_modules" +
           "\n/vendor/assets/stylesheets/gulp" +
-          "\n/vendor/assets/javascripts/gulp"
+          "\n/vendor/assets/javascripts/gulp\n"
       end
     end
   end
