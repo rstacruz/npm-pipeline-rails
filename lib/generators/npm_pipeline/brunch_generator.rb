@@ -33,9 +33,9 @@ module NpmPipeline
 
       def update_gitignore
         append_to_file '.gitignore',
-          "/node_modules\n" +
-          "/vendor/assets/stylesheets/brunch\n" +
-          "/vendor/assets/javascripts/brunch\n"
+          "\n/node_modules" +
+          "\n/vendor/assets/stylesheets/brunch" +
+          "\n/vendor/assets/javascripts/brunch\n"
       end
     end
   end
