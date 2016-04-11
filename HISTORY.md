@@ -1,3 +1,11 @@
+## [v1.3.0]
+> Apr 11, 2016
+
+- [#1] - Update support for Rails 5. ([@victorsolis])
+- [#1] - Fix issues with gitignore files that don't have a new line at the end. ([@victorsolis])
+
+[v1.3.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.2.0...v1.3.0
+
 ## [v1.2.0]
 > Mar 23, 2016
 
@@ -39,3 +47,5 @@
 - Initial release.
 
 [v1.0.0]: https://github.com/rstacruz/npm-pipeline-rails/tree/v1.0.0
+[#1]: https://github.com/rstacruz/npm-pipeline-rails/issues/1
+[@victorsolis]: https://github.com/victorsolis
