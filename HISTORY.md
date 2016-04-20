@@ -1,3 +1,10 @@
+## [v1.4.0]
+> Apr 20, 2016
+
+- [#3] - Prevent orphaned processes from accumulating. ([#4])
+
+[v1.4.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.3.0...v1.4.0
+
 ## [v1.3.0]
 > Apr 11, 2016
 
@@ -49,3 +56,5 @@
 [v1.0.0]: https://github.com/rstacruz/npm-pipeline-rails/tree/v1.0.0
 [#1]: https://github.com/rstacruz/npm-pipeline-rails/issues/1
 [@victorsolis]: https://github.com/victorsolis
+[#3]: https://github.com/rstacruz/npm-pipeline-rails/issues/3
+[#4]: https://github.com/rstacruz/npm-pipeline-rails/issues/4
