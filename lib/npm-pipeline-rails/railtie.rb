@@ -9,6 +9,10 @@ module NpmPipelineRails
         exit $?.exitstatus unless $?.exitstatus == 0
       end
     end
+
+    def do_endless_system(cmd)
+      loop { system cmd }
+    end
   end
 
   class Railtie < ::Rails::Railtie
@@ -35,7 +39,7 @@ module NpmPipelineRails
       if ::Rails.env.development? && ::Rails.const_defined?(:Server)
         do_system app.config.npm.install
         [*app.config.npm.watch].each do |cmd|
-          fork { do_system [cmd] }
+          fork { do_endless_system cmd }
         end
       end
     end
