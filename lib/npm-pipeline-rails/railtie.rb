@@ -3,17 +3,35 @@ require 'rails/railtie'
 
 module NpmPipelineRails
   module Utils
+    module_function
+
+    def log(str)
+      ::Rails.logger.debug "[npm-pipeline-rails] #{str}"
+    end
+
     def do_system(commands)
       [*commands].each do |cmd|
+        Utils.log "starting '#{cmd}'"
         system cmd
+        Utils.log "'#{cmd}' exited with #{$?.exitstatus} status"
         exit $?.exitstatus unless $?.exitstatus == 0
+      end
+    end
+
+    # Runs a block in the background. When the parent exits, the child
+    # will be asked to exit as well.
+    def background(name, &blk)
+      pid = fork(&blk)
+
+      at_exit do
+        Utils.log "Terminating '#{name}' [#{pid}]"
+        Process.kill 'TERM', pid
+        Process.wait pid
       end
     end
   end
 
   class Railtie < ::Rails::Railtie
-    include ::NpmPipelineRails::Utils
-
     config.npm = ActiveSupport::OrderedOptions.new
     config.npm.build = ['npm run build']
     config.npm.watch = ['npm run start']
@@ -23,8 +41,8 @@ module NpmPipelineRails
       namespace :assets do
         desc 'Build asset prerequisites using npm'
         task :npm_build do
-          do_system app.config.npm.install
-          do_system app.config.npm.build
+          Utils.do_system app.config.npm.install
+          Utils.do_system app.config.npm.build
         end
 
         task(:precompile).enhance ['npm_build']
@@ -33,9 +51,9 @@ module NpmPipelineRails
 
     initializer 'npm_pipeline.watch' do |app|
       if ::Rails.env.development? && ::Rails.const_defined?(:Server)
-        do_system app.config.npm.install
+        Utils.do_system app.config.npm.install
         [*app.config.npm.watch].each do |cmd|
-          fork { do_system [cmd] }
+          Utils.background(cmd) { Utils.do_system [cmd] }
         end
       end
     end
