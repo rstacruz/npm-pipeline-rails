@@ -1,3 +1,10 @@
+## [v1.5.0]
+> May 24, 2016
+
+- [#7] - Add a `config.npm.enable_watch` flag. ([@jasontorres])
+
+[v1.5.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.4.0...v1.5.0
+
 ## [v1.4.0]
 > Apr 20, 2016
 
@@ -55,6 +62,8 @@
 
 [v1.0.0]: https://github.com/rstacruz/npm-pipeline-rails/tree/v1.0.0
 [#1]: https://github.com/rstacruz/npm-pipeline-rails/issues/1
-[@victorsolis]: https://github.com/victorsolis
 [#3]: https://github.com/rstacruz/npm-pipeline-rails/issues/3
 [#4]: https://github.com/rstacruz/npm-pipeline-rails/issues/4
+[#7]: https://github.com/rstacruz/npm-pipeline-rails/issues/7
+[@jasontorres]: https://github.com/jasontorres
+[@victorsolis]: https://github.com/victorsolis
