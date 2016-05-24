@@ -80,6 +80,11 @@ npm-pipeline-rails provides these configuration options:
 # These are defaults; in most cases, you don't need to configure anything.
 
 Rails.application.configure do
+  # Enables npm_pipeline_rails's invocation of `watch` commands.
+  # If `true`, watch commands will be ran alongside Rails's server.
+  # Defaults to true in development.
+  config.npm.enable_watch = Rails.env.development?
+
   # Command to install dependencies
   config.npm.install = ['npm install']
 
