@@ -33,7 +33,7 @@ module NpmPipelineRails
 
   class Railtie < ::Rails::Railtie
     config.npm = ActiveSupport::OrderedOptions.new
-    config.npm.enabled = ::Rails.env.development?
+    config.npm.enable_watch = ::Rails.env.development?
     config.npm.build = ['npm run build']
     config.npm.watch = ['npm run start']
     config.npm.install = ['npm install']
@@ -51,7 +51,7 @@ module NpmPipelineRails
     end
 
     initializer 'npm_pipeline.watch' do |app|
-      if app.config.npm.enabled && ::Rails.const_defined?(:Server)
+      if app.config.npm.enable_watch && ::Rails.const_defined?(:Server)
         Utils.do_system app.config.npm.install
         [*app.config.npm.watch].each do |cmd|
           Utils.background(cmd) { Utils.do_system [cmd] }
