@@ -1,3 +1,10 @@
+## [v1.6.0]
+> May 27, 2016
+
+- [#9] - Add a `config.npm.install_on_asset_precompile` option to optimize deploy times.
+
+[v1.6.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.5.0...v1.6.0
+
 ## [v1.5.0]
 > May 24, 2016
 
@@ -65,5 +72,6 @@
 [#3]: https://github.com/rstacruz/npm-pipeline-rails/issues/3
 [#4]: https://github.com/rstacruz/npm-pipeline-rails/issues/4
 [#7]: https://github.com/rstacruz/npm-pipeline-rails/issues/7
+[#9]: https://github.com/rstacruz/npm-pipeline-rails/issues/9
 [@jasontorres]: https://github.com/jasontorres
 [@victorsolis]: https://github.com/victorsolis
