@@ -80,7 +80,7 @@ npm-pipeline-rails provides these configuration options:
 # These are defaults; in most cases, you don't need to configure anything.
 
 Rails.application.configure do
-  # Enables npm_pipeline_rails's invocation of `watch` commands.
+  # Enables npm_pipeline_rails's invocation of `watch` commands. (v1.5.0+)
   # If `true`, watch commands will be ran alongside Rails's server.
   # Defaults to true in development.
   config.npm.enable_watch = Rails.env.development?
@@ -99,6 +99,11 @@ Rails.application.configure do
     'npm run webpack:start',
     'npm run brunch:start'
   ]
+
+  # If 'true', runs 'npm install' on 'rake assets:precompile'. (v1.6.0+)
+  # This is generally desired, but you may set this to false when
+  # deploying to Heroku to speed things up.
+  config.npm.install_on_asset_precompile = true
 end
 ```
 
