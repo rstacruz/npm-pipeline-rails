@@ -37,12 +37,15 @@ module NpmPipelineRails
     config.npm.build = ['npm run build']
     config.npm.watch = ['npm run start']
     config.npm.install = ['npm install']
+    config.npm.install_on_asset_precompile = true
 
     rake_tasks do |app|
       namespace :assets do
         desc 'Build asset prerequisites using npm'
         task :npm_build do
-          Utils.do_system app.config.npm.install
+          if app.config.npm.install_on_asset_precompile
+            Utils.do_system app.config.npm.install
+          end
           Utils.do_system app.config.npm.build
         end
 
