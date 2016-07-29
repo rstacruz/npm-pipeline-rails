@@ -77,9 +77,11 @@ You may also want to disable some gems, depending on your set up:
 In Heroku, this requires the [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [Ruby](https://github.com/heroku/heroku-buildpack-ruby) buildpacks. See: [Using Multiple Buildpacks for an App](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app) *(devcenter.heroku.com)*
 
 ```
-heroku buildpacks:add heroku/nodejs
 heroku buildpacks:set heroku/ruby
+heroku buildpacks:add --index 1 heroku/nodejs
 ```
+
+Also see [Configuration](#configuration) on how to turn off `config.npm.install_on_asset_precompile`.
 
 <br>
 
