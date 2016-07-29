@@ -72,6 +72,17 @@ You may also want to disable some gems, depending on your set up:
 
 <br>
 
+## Heroku
+
+In Heroku, this requires the [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [Ruby](https://github.com/heroku/heroku-buildpack-ruby) buildpacks. Ensure that the Ruby buildpack is last.
+
+```
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/ruby
+```
+
+<br>
+
 ## Configuration
 
 npm-pipeline-rails provides these configuration options:
