@@ -74,11 +74,11 @@ You may also want to disable some gems, depending on your set up:
 
 ## Heroku
 
-In Heroku, this requires the [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [Ruby](https://github.com/heroku/heroku-buildpack-ruby) buildpacks. Ensure that the Ruby buildpack is last.
+In Heroku, this requires the [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [Ruby](https://github.com/heroku/heroku-buildpack-ruby) buildpacks. See: [Using Multiple Buildpacks for an App](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app) *(devcenter.heroku.com)*
 
 ```
 heroku buildpacks:add heroku/nodejs
-heroku buildpacks:add heroku/ruby
+heroku buildpacks:set heroku/ruby
 ```
 
 <br>
