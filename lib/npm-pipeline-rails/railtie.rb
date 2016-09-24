@@ -25,8 +25,12 @@ module NpmPipelineRails
 
       at_exit do
         Utils.log "Terminating '#{name}' [#{pid}]"
-        Process.kill 'TERM', pid
-        Process.wait pid
+        begin
+          Process.kill 'TERM', pid
+          Process.wait pid
+        rescue Errno::ESRCH, Errno::ECHILD => e
+          Utils.log "'#{name}' [#{pid}] already dead (#{e.class})"
+        end
       end
     end
   end
