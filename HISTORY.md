@@ -1,3 +1,10 @@
+## [v1.6.1]
+> May 27, 2016
+
+- [#5] - Fix 'no such process' errors when pressing `^C`. ([#10], [@mikker])
+
+[v1.6.1]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.6.0...v1.6.1
+
 ## [v1.6.0]
 > May 27, 2016
 
@@ -71,7 +78,10 @@
 [#1]: https://github.com/rstacruz/npm-pipeline-rails/issues/1
 [#3]: https://github.com/rstacruz/npm-pipeline-rails/issues/3
 [#4]: https://github.com/rstacruz/npm-pipeline-rails/issues/4
+[#5]: https://github.com/rstacruz/npm-pipeline-rails/issues/5
 [#7]: https://github.com/rstacruz/npm-pipeline-rails/issues/7
 [#9]: https://github.com/rstacruz/npm-pipeline-rails/issues/9
+[#10]: https://github.com/rstacruz/npm-pipeline-rails/issues/10
 [@jasontorres]: https://github.com/jasontorres
 [@victorsolis]: https://github.com/victorsolis
+[@mikker]: https://github.com/mikker
