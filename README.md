@@ -57,9 +57,13 @@ Use the generators for your preferred build tool:
 
 #### Set up support for tests
 
-If you're using continuous integration for your tests, configure it to run `bundle exec rake assets:npm_build` before your tests.
+If you're using continuous integration for your tests, configure it to run this before your tests:
 
-For tests running in your development machine, ensure that asset files are available when running your tests. This means starting your dev server at least once before running tests, or invoking `rake assets:npm_build` manually.
+```sh
+npm run build
+```
+
+For tests running in your development machine, ensure that asset files are available when running your tests. This means starting your dev server at least once before running tests, or invoking `npm run build` manually.
 
 #### Disable some gems
 
