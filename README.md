@@ -156,6 +156,21 @@ If you do this, you will need to run `npm run build` as part of your deploy scri
 
 <br>
 
+## Heroku setup
+
+When deploying to [Heroku](https://heroku.com), you'll need to use the [Ruby buildpack](https://github.com/heroku/heroku-buildpack-ruby) along with the [Node.js buildpack](https://github.com/heroku/heroku-buildpack-nodejs).
+
+```sh
+$ heroku buildpacks:set heroku/nodejs
+$ heroku buildpacks:add heroku/ruby
+
+Buildpack added. Next release on my-app-name will use:
+  1. heroku/nodejs
+  2. heroku/ruby
+```
+
+<br>
+
 ## Motivation
 
 Rails's asset pipeline was a great step forward for Rails 3. For today's requirements however, it doesn't always come with all the tools you need. npm-pipeline-rails lets you outsource asset building complexities to Node.js-based tools.
