@@ -78,14 +78,18 @@ You may also want to disable some gems, depending on your set up:
 
 ## Heroku
 
-In Heroku, this requires the [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [Ruby](https://github.com/heroku/heroku-buildpack-ruby) buildpacks. See: [Using Multiple Buildpacks for an App](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app) *(devcenter.heroku.com)*
+When deploying to [Heroku](https://heroku.com), use [Node.js](https://github.com/heroku/heroku-buildpack-nodejs) and [Ruby](https://github.com/heroku/heroku-buildpack-ruby) buildpacks together. See: [Using Multiple Buildpacks for an App](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app) *(devcenter.heroku.com)*
 
-```
-heroku buildpacks:set heroku/ruby
-heroku buildpacks:add --index 1 heroku/nodejs
+```sh
+$ heroku buildpacks:set heroku/ruby
+$ heroku buildpacks:add --index 1 heroku/nodejs
+
+Buildpack added. Next release on my-app-name will use:
+  1. heroku/nodejs
+  2. heroku/ruby
 ```
 
-Also see [Configuration](#configuration) on how to turn off `config.npm.install_on_asset_precompile`.
+It's recommended to turn off `config.npm.install_on_asset_precompile` to make deployments faster; see [§ Configuration](#configuration).
 
 <br>
 
@@ -153,21 +157,6 @@ The recommended setup renders files to `vendor/assets/stylesheets/brunch/` and `
 This is not recommended since you will miss out on automatic asset fingerprinting, among other nice integrations.
 
 If you do this, you will need to run `npm run build` as part of your deploy script and CI test script.
-
-<br>
-
-## Heroku setup
-
-When deploying to [Heroku](https://heroku.com), you'll need to use the [Ruby buildpack](https://github.com/heroku/heroku-buildpack-ruby) along with the [Node.js buildpack](https://github.com/heroku/heroku-buildpack-nodejs).
-
-```sh
-$ heroku buildpacks:set heroku/nodejs
-$ heroku buildpacks:add heroku/ruby
-
-Buildpack added. Next release on my-app-name will use:
-  1. heroku/nodejs
-  2. heroku/ruby
-```
 
 <br>
 
