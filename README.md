@@ -95,7 +95,7 @@ It's recommended to turn off `config.npm.install_on_asset_precompile` to make de
 
 ## Configuration
 
-npm-pipeline-rails provides these configuration options:
+npm-pipeline-rails provides these configuration options below. Put them inside `config/application.rb` (not in an initializer!).
 
 ```rb
 # These are defaults; in most cases, you don't need to configure anything.
@@ -147,6 +147,20 @@ When running `rake assets:precompile`, it will first run the `install` command t
 #### More info
 
 Consult [railtie.rb](https://github.com/rstacruz/npm-pipeline-rails/blob/master/lib/npm-pipeline-rails/railtie.rb) for the actual code that makes all these happen.
+
+<br>
+
+## Yarn
+
+To use [Yarn](https://yarnpkg.com/) instead of npm, change `config.npm.install` as seen below in `config/application.rb`. See [§ Configuration](#configuration) for more details.
+
+```rb
+Rails.application.configure do
+  # ...
+
+  config.npm.install = ['yarn']
+end
+```
 
 <br>
 
