@@ -9,6 +9,7 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 - Use [Grunt][] with Rails
 - Use [Browserify][] with Rails
 - Use [Broccoli][] with Rails
+- Use [Webpack][] with Rails
 - Use any other asset tool with Rails
 
 [Rails]: http://rubyonrails.org/
@@ -17,6 +18,7 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 [Browserify]: http://browserify.org/
 [Gulp]: http://gulpjs.com/
 [Grunt]: http://gruntjs.com/
+[Webpack]: https://webpack.github.io/
 
 <br>
 
