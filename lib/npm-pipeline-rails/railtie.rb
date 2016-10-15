@@ -42,6 +42,7 @@ module NpmPipelineRails
     config.npm.watch = ['npm run start']
     config.npm.install = ['npm install']
     config.npm.install_on_asset_precompile = true
+    config.npm.install_on_rails_server = true
 
     rake_tasks do |app|
       namespace :assets do
@@ -59,7 +60,9 @@ module NpmPipelineRails
 
     initializer 'npm_pipeline.watch' do |app|
       if app.config.npm.enable_watch && ::Rails.const_defined?(:Server)
-        Utils.do_system app.config.npm.install
+        if app.config.npm.install_on_rails_server
+          Utils.do_system app.config.npm.install
+        end
         [*app.config.npm.watch].each do |cmd|
           Utils.background(cmd) { Utils.do_system [cmd] }
         end
