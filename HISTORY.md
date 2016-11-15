@@ -1,3 +1,10 @@
+## [v1.6.2]
+> Oct 14, 2016
+
+- [#11] - Fix `rails generate npm_pipeline:gulp` not giving a working setup. ([@aka-cronos])
+
+[v1.6.2]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.6.1...v1.6.2
+
 ## [v1.6.1]
 > May 27, 2016
 
@@ -85,3 +92,5 @@
 [@jasontorres]: https://github.com/jasontorres
 [@victorsolis]: https://github.com/victorsolis
 [@mikker]: https://github.com/mikker
+[#11]: https://github.com/rstacruz/npm-pipeline-rails/issues/11
+[@aka-cronos]: https://github.com/aka-cronos
