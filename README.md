@@ -49,8 +49,8 @@ Use the generators for your preferred build tool:
 
 * Put together a setup with [Brunch], [Broccoli], [Gulp], or any other tool. It should:
   * Take source files from `app/brunch/`
-  * Render JS to `vendor/assets/stylesheets/brunch/`
-  * Render CSS to `vendor/assets/javascripts/brunch/`
+  * Render CSS to `vendor/assets/stylesheets/brunch/`
+  * Render JS to `vendor/assets/javascripts/brunch/`
   * _(Replace `brunch` with whatever build tool you use.)_
 * Create a `package.json` with `start` and `build` scripts to point to this setup. ([See example](lib/generators/npm_pipeline/brunch/package.json))
   * `start` - Configure this script to run a development file watcher.
