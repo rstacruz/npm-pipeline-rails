@@ -6,7 +6,7 @@
   "dependencies": {
     "brunch": "2.8.2",
     "javascript-brunch": "2.0.0",
-    "css-brunch": "2.0.0",
-    "auto-reload-brunch": "2.0.0"
+    "css-brunch": "2.6.1",
+    "auto-reload-brunch": "2.7.1"
   }
 }
