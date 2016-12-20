@@ -48,11 +48,11 @@ Use the generators for your preferred build tool:
 
 #### Manual setup
 
-* Put together a setup with [Brunch], [Broccoli], [Gulp], or any other tool. It should:
-  * Take source files from `app/brunch/`
-  * Render CSS to `vendor/assets/stylesheets/brunch/`
-  * Render JS to `vendor/assets/javascripts/brunch/`
-  * _(Replace `brunch` with whatever build tool you use.)_
+* Put together a setup with [Brunch], [Broccoli], [Gulp], [Webpack] or any other tool. It should:
+  * Take source files from `app/webpack/`
+  * Render CSS to `vendor/assets/stylesheets/webpack/`
+  * Render JS to `vendor/assets/javascripts/webpack/`
+  * _(Replace `webpack` with whatever build tool you use.)_
 * Create a `package.json` with `start` and `build` scripts to point to this setup. ([See example](lib/generators/npm_pipeline/brunch/package.json))
   * `start` - Configure this script to run a development file watcher.
   * `build` - Configure this script to run a production compiler.
@@ -169,7 +169,7 @@ end
 
 ## Skipping Rails asset pipeline
 
-The recommended setup renders files to `vendor/assets/stylesheets/brunch/` and `vendor/assets/javascripts/brunch/`. (Replace `brunch` with whatever build tool you use.) You may opt to output to `public/assets/stylesheets/` and `public/assets/javascripts/` instead.
+The recommended setup renders files to `vendor/assets/stylesheets/webpack/` and `vendor/assets/javascripts/webpack/`. (Replace `webpack` with whatever build tool you use.) You may opt to output to `public/assets/stylesheets/` and `public/assets/javascripts/` instead.
 
 This is not recommended since you will miss out on automatic asset fingerprinting, among other nice integrations.
 
