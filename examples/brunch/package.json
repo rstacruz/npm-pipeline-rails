@@ -4,14 +4,14 @@
   "author": "Your Name",
   "version": "0.1.0",
   "scripts": {
-    "start": "brunch watch",
-    "build": "brunch build --production"
+    "start": "brunch watch -j 4",
+    "build": "brunch build --production -j 4"
   },
   "dependencies": {},
   "devDependencies": {
     "brunch": "2.8.2",
     "javascript-brunch": "2.0.0",
     "css-brunch": "2.6.1",
-    "auto-reload-brunch": "^2.0.0"
+    "auto-reload-brunch": "2.7.1"
   }
 }
