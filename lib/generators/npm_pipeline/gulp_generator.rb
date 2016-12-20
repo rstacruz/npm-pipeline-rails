@@ -3,7 +3,7 @@ require 'rails/generators/base'
 module NpmPipeline
   module Generators
     class GulpGenerator < Rails::Generators::Base
-      desc 'Creates'
+      desc 'Adds Gulp configuration via npm-pipeline-rails'
       source_root File.expand_path('../gulp', __FILE__)
 
       def create_package_json
