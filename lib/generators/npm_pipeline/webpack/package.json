@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "webpack --progress --colors --watch",
-    "build": "webpack --progress --colors"
+    "start": "webpack --progress --colors --watch -d",
+    "build": "webpack --progress --colors -p"
   },
   "babel": {
     "presets": [
