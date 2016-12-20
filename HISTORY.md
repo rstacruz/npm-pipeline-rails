@@ -1,3 +1,10 @@
+## [v1.7.0]
+> Dec 20, 2016
+
+- [#12] - Implement `config.npm.install_on_rails_server` to suppress `npm install` on Rails server startup. ([@mikker])
+
+[v1.7.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.6.2...v1.7.0
+
 ## [v1.6.2]
 > Oct 14, 2016
 
@@ -93,4 +100,5 @@
 [@victorsolis]: https://github.com/victorsolis
 [@mikker]: https://github.com/mikker
 [#11]: https://github.com/rstacruz/npm-pipeline-rails/issues/11
+[#12]: https://github.com/rstacruz/npm-pipeline-rails/issues/12
 [@aka-cronos]: https://github.com/aka-cronos
