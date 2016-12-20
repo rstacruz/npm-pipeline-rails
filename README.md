@@ -6,10 +6,10 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 
 - Use [Brunch][] with Rails ([instructions](docs/brunch.md))
 - Use [Gulp][] with Rails ([instructions](docs/gulp.md))
+- Use [Webpack][] with Rails ([instructions](docs/webpack.md))
 - Use [Grunt][] with Rails
 - Use [Browserify][] with Rails
 - Use [Broccoli][] with Rails
-- Use [Webpack][] with Rails
 - Use any other asset tool with Rails
 
 [Rails]: http://rubyonrails.org/
@@ -44,6 +44,7 @@ Use the generators for your preferred build tool:
 
 - __[Brunch](docs/brunch.md)__ - `./bin/rails generate npm_pipeline:brunch`
 - __[Gulp](docs/gulp.md)__ - `./bin/rails generate npm_pipeline:gulp`
+- __[Webpack](docs/webpack.md)__ - `./bin/rails generate npm_pipeline:webpack`
 
 #### Manual setup
 

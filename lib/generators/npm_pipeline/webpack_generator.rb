@@ -11,7 +11,7 @@ module NpmPipeline
       end
 
       def create_webpack_config
-        template 'webpack.config.js', 'webpack.config.js'
+        template 'webpack.config.js','webpack.config.js'
       end
 
       def update_assets
@@ -22,27 +22,17 @@ module NpmPipeline
       end
 
       def create_sample_css
-        create_file 'app/webpack/css/app.js', [
-          '// http://stackoverflow.com/a/30652110/873870',
-          'function requireAll (r) { r.keys().forEach(r) }',
-          '',
-          "requireAll(require.context('./components/', true, /\.scss$/))"
-        ].join("\n")
-
-        create_file 'app/webpack/css/components/example.scss',
-          %(html:before { content: 'Webpack assets added successfully! Edit app/gulp/example.css or remove it.'; display: block; padding: 20px; background: #ffc; color: #111; position: fixed; top: 16px; right: 16px; max-width: 600px; z-index: 10000; font-family: sans-serif; font-size: 14px; line-height: 1.6; }\n)
+        [
+          'app/webpack/css/app.js',
+          'app/webpack/css/components/example.scss'
+        ].each { |f| template f, f }
       end
 
       def create_sample_js
-        create_file 'app/webpack/js/app.js', [
-          '// http://stackoverflow.com/a/30652110/873870',
-          'function requireAll (r) { r.keys().forEach(r) }',
-          '',
-          "requireAll(require.context('./behaviors/', true, /\.js$/))"
-        ].join("\n")
-
-        create_file 'app/webpack/js/behaviors/example.js',
-          "alert('Webpack works!')"
+        [
+          'app/webpack/js/app.js',
+          'app/webpack/js/behaviors/example.js'
+        ].each { |f| template f, f }
       end
 
       def update_gitignore
