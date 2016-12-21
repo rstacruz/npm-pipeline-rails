@@ -8,7 +8,7 @@ Run this to set your project up with a simple Webpack config.
 
 ## The default config
 
-_See:_ [sample webpack.config.js](../lib/generators/npm_pipeline/webpack/webpack.config.js),
+> _See:_ [sample webpack.config.js](../lib/generators/npm_pipeline/webpack/webpack.config.js)
 
 This adds a Webpack configuration with sensible features for typical Rails apps.
 
