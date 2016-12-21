@@ -6,13 +6,22 @@ Run this to set your project up with a simple Webpack config.
 ./bin/rails generate npm_pipeline:webpack
 ```
 
-This configuration includes:
+## The default config
+
+_See:_ [sample webpack.config.js](../lib/generators/npm_pipeline/webpack/webpack.config.js),
+
+This adds a Webpack configuration with sensible features for typical Rails apps.
+
+__JavaScript:__ It will transpile ES2015 to compatible code using Babel. You'll also be able to use npm modules and `require()`, thanks to Webpack.
 
 - [babel-loader](https://www.npmjs.com/package/babel-loader) for evergreen `.js` support
+
+__CSS:__ It ships with Sass support along with some basic PostCSS plugins. You'll also be able to use `image-url()` and other Rails magic so you can take advantage of Rails's asset fingerprinting.
+
+- [sass-loader](https://www.npmjs.com/package/sass-loader) for Sass support
 - [postcss-loader](https://www.npmjs.com/package/postcss-loader) with:
   - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
   - [postcss-asset-url-rails](https://www.npmjs.com/package/postcss-asset-url-rails) for `image-url()` support
-- [sass-loader](https://www.npmjs.com/package/sass-loader) for Sass support
 - [extract-text-webpack-plugin](https://www.npmjs.com/package/extract-text-webpack-plugin) for `.css` file support
 
 ## Manual setup

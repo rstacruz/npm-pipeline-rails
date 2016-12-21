@@ -6,12 +6,16 @@ module NpmPipeline
       desc 'Adds Webpack configuration via npm-pipeline-rails'
       source_root File.expand_path('../webpack', __FILE__)
 
-      def create_package_json
-        template 'package.json', 'package.json'
-      end
-
-      def create_webpack_config
-        template 'webpack.config.js','webpack.config.js'
+      def copy_files
+        [
+          'package.json',
+          'yarn.lock',
+          'webpack.config.js',
+          'app/webpack/css/app.js',
+          'app/webpack/css/components/example.scss',
+          'app/webpack/js/app.js',
+          'app/webpack/js/behaviors/example.js'
+        ].each { |f| template f, f }
       end
 
       def update_assets
@@ -19,20 +23,6 @@ module NpmPipeline
           "/*\n *= require webpack/app\n */\n"
         append_to_file 'app/assets/javascripts/application.js',
           "//= require webpack/app\n"
-      end
-
-      def create_sample_css
-        [
-          'app/webpack/css/app.js',
-          'app/webpack/css/components/example.scss'
-        ].each { |f| template f, f }
-      end
-
-      def create_sample_js
-        [
-          'app/webpack/js/app.js',
-          'app/webpack/js/behaviors/example.js'
-        ].each { |f| template f, f }
       end
 
       def update_gitignore
