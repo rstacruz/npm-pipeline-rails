@@ -30,6 +30,12 @@ npm-pipeline-rails allows you to use any toolchain to bulid your asset files in 
 
 [Broccoli]: https://github.com/broccolijs/broccoli
 
+## :warning: Notice :warning:
+
+Rails 5.1 will be adding official support for Webpack via [webpacker]. In contrast, npm-pipeline-rails is far less opinionated and more flexible than webpacker, but expect better support from using Rails's official integration.
+
+[webpacker]: https://github.com/rails/webpacker
+
 ## Usage
 
 Add this line below to your `Gemfile`. After that, proceed with an automated or manual setup.
