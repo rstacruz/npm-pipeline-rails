@@ -1,16 +1,11 @@
 {
-  "name": "gulp-app",
-  "description": "Description",
-  "author": "Your Name",
-  "version": "0.1.0",
   "scripts": {
     "start": "gulp watch",
     "build": "gulp build"
   },
-  "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-cli": "^1.2.1",
-    "gulp-concat": "^2.6.0"
+    "gulp": "3.9.1",
+    "gulp-cli": "1.2.1",
+    "gulp-concat": "2.6.0"
   }
 }

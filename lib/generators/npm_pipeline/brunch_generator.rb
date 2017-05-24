@@ -3,7 +3,7 @@ require 'rails/generators/base'
 module NpmPipeline
   module Generators
     class BrunchGenerator < Rails::Generators::Base
-      desc 'Creates'
+      desc 'Adds Brunch configuration via npm-pipeline-rails'
       source_root File.expand_path('../brunch', __FILE__)
 
       def create_package_json
