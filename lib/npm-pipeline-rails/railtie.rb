@@ -6,7 +6,7 @@ module NpmPipelineRails
     module_function
 
     def log(str)
-      ::Rails.logger.debug "[npm-pipeline-rails] #{str}"
+      puts "[npm-pipeline-rails] #{str}"
     end
 
     def do_system(commands)
