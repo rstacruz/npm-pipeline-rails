@@ -1,3 +1,10 @@
+## [v1.8.0]
+> May 24, 2017
+
+- [#18] - Add Webpack support via `./bin/rails g npm_pipeline:webpack`.
+
+[v1.8.0]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.7.0...v1.8.0
+
 ## [v1.7.0]
 > Dec 20, 2016
 
@@ -101,4 +108,5 @@
 [@mikker]: https://github.com/mikker
 [#11]: https://github.com/rstacruz/npm-pipeline-rails/issues/11
 [#12]: https://github.com/rstacruz/npm-pipeline-rails/issues/12
+[#18]: https://github.com/rstacruz/npm-pipeline-rails/issues/18
 [@aka-cronos]: https://github.com/aka-cronos
