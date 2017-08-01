@@ -1,3 +1,10 @@
+## [v1.8.1]
+> Aug  1, 2017
+
+- Webpack generator: prevent loading `webpack-livereload-plugin` in the default Webpack config to prevent deployment errors.
+
+[v1.8.1]: https://github.com/rstacruz/npm-pipeline-rails/compare/v1.8.0...v1.8.1
+
 ## [v1.8.0]
 > May 24, 2017
 
