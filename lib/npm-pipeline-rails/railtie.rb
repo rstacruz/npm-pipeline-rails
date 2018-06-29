@@ -14,7 +14,7 @@ module NpmPipelineRails
         Utils.log "starting '#{cmd}'"
         system cmd
         Utils.log "'#{cmd}' exited with #{$?.exitstatus} status"
-        exit $?.exitstatus unless $?.exitstatus == 0
+        exit $?.exitstatus unless $?.exitstatus.nil? || $?.exitstatus == 0
       end
     end
 
