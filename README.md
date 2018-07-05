@@ -2,7 +2,7 @@
 
 > Use npm as part of your Rails asset pipeline
 
-npm-pipeline-rails allows you to use any toolchain to bulid your asset files in [Rails] 4.2+. This allows you to:
+npm-pipeline-rails allows you to use any toolchain to build your asset files in [Rails] 4.2+. This allows you to:
 
 - Use [Brunch][] with Rails ([instructions](docs/brunch.md))
 - Use [Gulp][] with Rails ([instructions](docs/gulp.md))
