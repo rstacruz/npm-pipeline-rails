@@ -1,4 +1,4 @@
-> ### Deprecated
+> ## End-of-life
 >
 > Rails 6 now recommends using [Webpacker](https://github.com/rails/webpacker) to manage frontend dependencies. Thank you to all the contributors who have made npm-pipeline-rails a successful experiment.
 
